@@ -3,7 +3,7 @@ require 'rake/testtask'
 require 'bundler/gem_tasks'
 
 # environment
-ENV['RACK_ENV'] ||= 'development'
+ENV['RUBY_ENV'] ||= 'development'
 ENV['RABBITMQ_URL'] = 'amqp://guest:guest@127.0.0.1:5672'
 
 # load path

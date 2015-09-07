@@ -8,6 +8,6 @@ describe PikaQ::Exchanges::Base do
   end
 
   it 'can generate the exchange name' do
-    PikaQ::Exchanges::Base.generated_exchange_name.must_equal 'pikaq.exchanges.base.development'
+    PikaQ::Exchanges::Base.generated_exchange_name.must_equal 'pikaq.exchanges.base.test'
   end
 end

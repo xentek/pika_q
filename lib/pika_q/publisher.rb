@@ -18,7 +18,7 @@ module PikaQ
       message_options ||= {}
       message_options = default_message_options.merge(message_options)
       published = exchange.publish(payload, message_options)
-      connection.close
+      channel.close
       published
     end
 

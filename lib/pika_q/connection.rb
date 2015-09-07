@@ -5,7 +5,7 @@ module PikaQ
     attr_reader :channel, :rabbitmq_url, :session
 
     def initialize(rabbitmq_url = ENV['RABBITMQ_URL'])
-      @session = Bunny.new(rabbitmq)
+      @session = Bunny.new(rabbitmq_url)
       @session.start
       @channel = @session.create_channel
     end

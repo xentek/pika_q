@@ -3,19 +3,17 @@
 require 'spec_helper'
 
 describe PikaQ::Consumers::Base do
-  let(:uuid) { '2d931510-d99f-494a-8c67-87feb05e1594' }
-  let(:routing_key) { 'test.routing.key' }
   before do
     class TestConsumer < PikaQ::Consumers::Base
-      config queue: PikaQ::Queues::Default,
+      config queue: PikaQ::Queues::Base,
              exchange: PikaQ::Exchanges::Default,
-             consumer_tag: default_consumer_tag(uuid),
+             consumer_tag: default_consumer_tag('2d931510-d99f-494a-8c67-87feb05e1594'),
              routing_key: 'test.routing.key'
     end
   end
 
   it 'has a queue' do
-    TestConsumer.queue.must_equal PikaQ::Queues::Default
+    TestConsumer.queue.must_equal PikaQ::Queues::Base
   end
 
   it 'has an exchange' do
@@ -23,10 +21,10 @@ describe PikaQ::Consumers::Base do
   end
 
   it 'has a consumer tag' do
-    TestConsumer.consumer_tag.must_equal "testworker.test.#{uuid}"
+    TestConsumer.consumer_tag.must_equal 'testconsumer.test.2d931510-d99f-494a-8c67-87feb05e1594'
   end
 
   it 'has a routing key' do
-    TestConsumer.routing_key.must_equal routing_key
+    TestConsumer.routing_key.must_equal 'test.routing.key'
   end
 end

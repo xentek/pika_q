@@ -37,7 +37,7 @@ module PikaQ
       private
 
       def self.default_consumer_tag(unique_id = SecureRandom.uuid)
-        "#{self.to_s.gsub('::','.')}.#{ENV['RACK_ENV']}.#{unique_id}".downcase
+        "#{self.to_s.gsub('::','.')}.#{ENV['RUBY_ENV']}.#{unique_id}".downcase
       end
 
       def self.default_config
