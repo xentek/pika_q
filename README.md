@@ -7,7 +7,7 @@
 PikaQ makes working with Rabbit MQ _even_ easier. It provides a thin layer around [Bunny](http://rubybunny.info), the defacto standard ruby library for Rabbit MQ. It provides objects for writing your own high performance, message consumers, as well a generic service object for publishing messages to any Rabbit MQ exchange.
 
 > The name "pika" is used for any member of the Ochotonidae, a family within the order of lagomorphs, which also includes the Leporidae (rabbits and hares).
-> - From [Wikipedia](https://en.wikipedia.org/wiki/Pika)
+> __-- [Wikipedia](https://en.wikipedia.org/wiki/Pika)__
 
 ### Gemfile
 
@@ -40,7 +40,7 @@ publisher = PikaQ::Publisher.new(channel, '', :default)
 publisher.send_message('{"test":"ok"}')
 ```
 
-`PikaQ::Publisher.new` takes the same arguments as `[Bunny::Exchange.new](http://reference.rubybunny.info/Bunny/Exchange.html#initialize-instance_method)`.
+`PikaQ::Publisher.new` takes the same arguments as [`Bunny::Exchange.new`](http://reference.rubybunny.info/Bunny/Exchange.html#initialize-instance_method).
 
 ### Establishing an Exchange
 
