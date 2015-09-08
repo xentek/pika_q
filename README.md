@@ -1,4 +1,7 @@
 # pika_q
+[![Build Status](https://travis-ci.org/xentek/pika_q.svg)](https://travis-ci.org/xentek/pika_q)
+
+---
 
 ![PikaQ, I choose you!](http://xentek-images.s3.amazonaws.com/pikachu-and-ash.png "PikaQ, I choose you!")
 
@@ -8,6 +11,8 @@ PikaQ makes working with Rabbit MQ _even_ easier. It provides a thin layer aroun
 
 > The name "pika" is used for any member of the Ochotonidae, a family within the order of lagomorphs, which also includes the Leporidae (rabbits and hares).
 > __-- [Wikipedia](https://en.wikipedia.org/wiki/Pika)__
+
+---
 
 ### Gemfile
 
